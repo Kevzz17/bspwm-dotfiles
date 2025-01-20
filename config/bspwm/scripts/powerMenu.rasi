@@ -1,0 +1,115 @@
+configuration {
+	hover-select:				true;
+	me-select-entry:			"";
+	me-accept-entry:			"MousePrimary";
+}
+
+* {
+    font:                        "JetBrainsMono Nerd Font Bold 12";
+    background:                  #282828b6;
+    foreground:                  #e2cca9;
+    selected:                    #b0b846;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       25%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    background-color:            transparent;
+    border:                      2px 2px 2px 2px;
+    border-radius:               15px;
+    border-color:                @selected;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     25px 30px;
+    background-color:            @background;
+    border-radius:               15px;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     15px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @background;
+    children:                    [ "textbox-prompt-colon", "prompt" ];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    font:                        "JetBrainsMono Nerd Font Bold 11";
+    str:                         "  ";
+    padding:                     12px 16px 12px 12px;
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+prompt {
+	  font:                        "JetBrainsMono Nerd Font Bold 11";
+    enabled:                     true;
+    padding:                     12px 117px;
+    background-color:            transparent;
+    text-color:                  @selected;
+    border:                      2px 2px 2px 2px;
+    border-color:                @selected;
+}
+
+message {
+    enabled:                     true;
+    padding:                     12px;
+    border-color:                @selected;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    spacing:                     15px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    padding:                     30px 10px;
+    border:                      0px solid;
+    border-radius:               0px;
+    background-color:            #3c3836;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element-text {
+    font:                        "Material Design Icons Desktop 36";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
