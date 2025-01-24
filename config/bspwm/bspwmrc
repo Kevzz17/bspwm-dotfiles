@@ -6,7 +6,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 
 ################---------------- Workspaces ----------------################
-bspc monitor -d I II III IV V VI VII
+bspc monitor -d Term Sys Web Chat Idle Game Code
 
 ################---------------- bspwm config ----------------################
 bspc config split_ratio                   0.51

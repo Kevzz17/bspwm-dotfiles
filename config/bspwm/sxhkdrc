@@ -28,11 +28,11 @@ super + Escape
 
 # run the shutdown menu
 super + alt + p
-    /home/kevz/.config/bspwm/scripts/PowerMenu
+    "$HOME"/.config/bspwm/scripts/PowerMenu
 
 # run the keyboard layout changer
 super + alt + k
-    /home/kevz/.config/bspwm/scripts/change_kb_layout
+    "$HOME"/.config/bspwm/scripts/change_kb_layout
 
 #
 # bspwm hotkeys
